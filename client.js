@@ -6,7 +6,13 @@
  * 3. After the loop, log out the total number of
  *    hobbies
  */
-
+let count = 0;
+let hobbyArray = ['fishing', 'disc golf', 'hiking', 'eating'];
+for (hobby of hobbyArray) {
+    console.log(hobby);
+    count +=1;
+}
+console.log(`The total number of hobbies is: ${count}`);
 
 // Example output
 // 1. swimming
@@ -29,7 +35,16 @@
 // Example output
 // green, red, teal, orange, teal
 // Teal was found 2 times
+let colors = ['red', 'white', 'blue', 'black', 'grey', 'teal'];
+let tealCount = 0;
 
+for(i of colors) {
+    if (i === 'teal') {
+    tealCount ++;
+    }
+} 
+console.log(colors);
+console.log(`Teal was found ${tealCount} times`);
 
 /**
  * #3 Even & Odd
@@ -47,7 +62,24 @@
 // Odd 3, 7, 11
 // Even 2, 8, 4, 2
 
+let numArray = [3, 10, 7, 25, 4, 13];
+let oddNumbers = [];
+let evenNumbers = [];
 
+
+
+for (let i = 0; i < numArray.length; i++) {
+    if(numArray[i] %2 === 0) {
+        evenNumbers.push(numArray[i]);
+    }else{
+        oddNumbers.push(numArray[i]);
+    }
+}
+
+
+console.log(`Odd: ${oddNumbers}`);
+console.log(`Even: ${evenNumbers}`);
+console.log('test');
 /**
  * #4 Flipping Switches
  * --------------------
@@ -57,7 +89,17 @@
  * 4. Output both arrays
  */
 
+let TorF = [true, false, true, false];
+let toggled = [];
 
+for (let i = 0; i < TorF.length; i++) {
+    if(TorF[i] === true) {
+        toggled.push(false);
+    } else {
+        toggled.push(true);
+    }
+}
+console.log(toggled);
 // Example output
 // true, false, true, true
 // Toggled false, true, false, false
@@ -77,3 +119,28 @@
 // Example output
 // Before loop 3, 0, 2, 8, 0, 0, 0
 // After loop 3, 0, 2, 8
+
+let nums = [3, 2, 1, 0, 5, 9, 0, 0, 0];
+
+for (let i = nums.length - 1; i >= 0; i--) {
+    console.log(nums[i], i);
+    if (nums[i] === 0) {
+        console.log(`in 'if' block`);
+        nums.pop();
+    } 
+    else {
+        console.log(`in 'else' block`)
+        break;
+    }
+}
+
+// didn't catch Andreas' explanation
+let someNumbers = [];
+let maxDistance = 0;
+for (let i = 0; i < someNumbers)
+
+const list = document.getElementById("hobby-list");
+list.innerHTML += `<li>This is the first item in my list</li>`;
+list.innerHTML += `<li>This is the second item in my list</li>`;
+const header = document.getElementById("heading-one");
+header.innerHTML = `This is the new header`;
